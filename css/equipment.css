@@ -77,18 +77,18 @@ body {
     left: -260px;
 }
 
-.category-menu ul {
+.category-menu ul li {
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.category-menu li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 15px;
-    cursor: pointer;
+.category-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: block;
+    padding: 10px 16px;
 }
 
 .category-menu li:hover {
@@ -139,6 +139,8 @@ body {
     background: #ffffff;
     border-bottom: 1px solid #e5e5e5;
     padding: 8px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .sub-header ul {
@@ -147,10 +149,9 @@ body {
     list-style: none;
     margin: 0;
     padding: 0 30px;
-    align-items: center;
 }
 
-.sub-header ul li a {
+.sub-header li a {
     text-decoration: none;
     color: #333;
     font-size: 15px;
