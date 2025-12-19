@@ -41,40 +41,32 @@ body {
 }
 
 .category-menu {
-    position: fixed;
-    top: 0;
-    left: -260px;
-    width: 250px;
-    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
     background: #ffffff;
     color: black;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15);
-    padding: 20px;
-    transition: 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    padding: 8px 0;
+    margin-top: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
     z-index: 999;
 }
 
-.category-menu.active {
-    left: 0;
+.menu {
+    position: relative;
 }
 
-.close-menu {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: transparent;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    color: #666;
-}
-
-.close-menu:hover {
-    color: #000;
-}
-
-.close-menu.active {
-    left: -260px;
+.menu-btn:hover~.category-menu,
+.category-menu:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .category-menu ul li {
@@ -83,18 +75,19 @@ body {
     list-style: none;
 }
 
-.category-menu li:hover {
-    background: #f2f6ff;
-    padding-left: 8px;
-    transition: 0.2s;
-}
-
 .category-menu li a {
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 14px;
     display: block;
     padding: 10px 16px;
+    transition: all 0.2s;
+}
+
+.category-menu li a:hover {
+    background: #f2f6ff;
+    color: #0066ff;
+    padding-left: 24px;
 }
 
 .main-header-logo {
@@ -176,7 +169,8 @@ body {
     margin: 25px 0;
 }
 
-#arrow {
+.arrow-left,
+.arrow-right {
     position: absolute;
     top: 45%;
     width: 40px;
@@ -189,11 +183,11 @@ body {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    transition: background .3s;
     z-index: 10;
 }
 
-#arrow:hover {
+.arrow-left:hover,
+.arrow-right:hover {
     background: #004ccc;
 }
 
@@ -207,11 +201,15 @@ body {
 
 .section-content {
     position: relative;
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
     padding: 20px 0;
     display: flex;
     gap: 20px;
-    /* animation: slide 20s linear infinite; */
+}
+
+.section-content::-webkit-scrollbar {
+    display: none;
 }
 
 .product-card {
@@ -220,7 +218,6 @@ body {
     padding: 15px;
     /* chia đều 4 sản phẩm thành 1 hàng */
     min-width: calc((100% - 60px) / 4);
-    max-width: calc((100% - 60px) / 4);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     transition: .25s;
 }
@@ -289,15 +286,3 @@ body {
 .footer-copyright p {
     padding: 20px 0;
 }
-
-
-/* animation chạy ngang
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-} */

@@ -1,10 +1,20 @@
-const btnOpen = document.querySelector(".menu-btn");
-const btnClose = document.querySelector(".close-menu");
-const sidebar = document.querySelector(".category-menu");
+// Slider function
+function slidePrev(button) {
+    const container = button.closest('.product-container');
+    const content = container.querySelector('.section-content');
+    const cardWidth = content.querySelector('.product-card').offsetWidth + 20; // 20px là gap
+    content.scrollBy({
+        left: -cardWidth,
+        behavior: 'smooth'
+    });
+}
 
-btnOpen.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-});
-btnClose.addEventListener("click", () => {
-    sidebar.classList.toggle("active");
-});
+function slideNext(button) {
+    const container = button.closest('.product-container');
+    const content = container.querySelector('.section-content');
+    const cardWidth = content.querySelector('.product-card').offsetWidth + 20; // 20px là gap
+    content.scrollBy({
+        left: cardWidth,
+        behavior: 'smooth'
+    });
+}

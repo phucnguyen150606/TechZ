@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập — TechZ</title>
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/mainUIstyle.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="left-header">
+            <div class="menu">
+                <button class="menu-btn">☰ Danh mục</button>
+                <div class="category-menu">
+                    <ul>
+                        <li><a href="phone.html">Điện thoại</a></li>
+                        <li><a href="laptop.html">Laptop</a></li>
+                        <li><a href="pc.html">PC</a></li>
+                        <li><a href="equipment.html">Phụ kiện</a></li>
+                        <li><a href="display.html">Màn hình</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-header-logo"><a href="../index.html">TechZ</a></div>
+            <div class="search-box">
+                <input type="text" placeholder="Bạn cần tìm gì?">
+            </div>
+        </div>
+
+        <div class="right-header">
+            <div class="header-item-hotline">
+                <span>📞0123 456 789</span>
+            </div>
+
+            <div class="header-item-cart">
+                <a href="./cart.html" class="cart-link">🛒Giỏ hàng</a>
+            </div>
+
+            <div class="header-item-account">
+                <a href="signin.html" class="login-link">👤 Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="signin-container">
+            <div class="signin-card">
+                <h1 class="signin-title">Đăng nhập</h1>
+                <form id="signin-form" novalidate>
+                    <label class="input-label">Email hoặc số điện thoại
+                        <input id="identifier" name="identifier" type="text" autocomplete="username" placeholder="email@example.com hoặc 012xxx" required>                
+                    </label>
+
+                    <label class="input-label">Mật khẩu
+                            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Mật khẩu" required>
+                    </label>
+
+                    <div class="form-options">
+                        <label class="remember"><input type="checkbox" id="remember"> Ghi nhớ đăng nhập</label>
+                        <a class="forgot" href="#">Quên mật khẩu?</a>
+                    </div>
+
+                    <button type="submit" class="signin-btn">Đăng nhập</button>
+
+                    <div class="or">hoặc</div>
+
+                    <button type="button" class="google-btn">Đăng nhập bằng Google</button>
+
+                    <p class="signup">Chưa có tài khoản? <a href="signup.html">Đăng ký</a></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/mainUI.js"></script>
+    <script src="../js/signin.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechZ</title>
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="left-header">
+            <div class="menu">
+                <button class="menu-btn">☰ Danh mục</button>
+                <div class="category-menu">
+                    <ul>
+                        <li><a href="phone.html">Điện thoại</a></li>
+                        <li><a href="laptop.html">Laptop</a></li>
+                        <li><a href="pc.html">PC</a></li>
+                        <li><a href="equipment.html">Phụ kiện</a></li>
+                        <li><a href="display.html">Màn hình</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main-header-logo"><a href="../index.html">TechZ</a></div>
+            <div class="search-box">
+                <input type="text" placeholder="Bạn cần tìm gì?">
+            </div>
+        </div>
+
+        <div class="right-header">
+            <div class="header-item-hotline">
+                <span>📞0123 456 789</span>
+            </div>
+
+            <div class="header-item-cart">
+                <a href="cart.html" class="cart-link">🛒Giỏ hàng</a>
+            </div>
+
+            <div class="header-item-account">
+                <a href="signin.html" class="login-link">👤 Đăng nhập</a>
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="cart-container">
+            <h1 class="cart-title">Giỏ Hàng của Bạn</h1>
+
+            <div class="cart-wrapper">
+                <!-- Bảng sản phẩm -->
+                <div class="cart-items-section">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Sản Phẩm</th>
+                                <th>Đơn Giá</th>
+                                <th>Số Lượng</th>
+                                <th>Thành Tiền</th>
+
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+                        </tbody>
+                    </table>
+
+                    <!-- Thông báo khi giỏ trống -->
+                    <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
+                        <p>🛒 Giỏ hàng của bạn trống</p>
+                        <a href="display.html" class="continue-shopping">← Tiếp tục mua sắm</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar thanh toán -->
+                <aside class="cart-summary">
+                    <div class="summary-box">
+                        <h2>Tóm Tắt Đơn Hàng</h2>
+
+                        <div class="summary-item">
+                            <span>Tổng sản phẩm:</span>
+                            <span id="total-items">0</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Tổng tiền hàng:</span>
+                            <span id="subtotal">0 đ</span>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Phí vận chuyển:</span>
+                            <span id="shipping">0 đ</span>
+                        </div>
+
+                        <div class="summary-divider"></div>
+
+                        <div class="summary-total">
+                            <span>Tổng cộng:</span>
+                            <span id="total-price">0 đ</span>
+                        </div>
+
+                        <button class="checkout-btn">💳 Thanh Toán</button>
+                        <a href="../index.html" class="continue-shopping-btn">Tiếp tục mua sắm</a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/cart.js"></script>
+</body>
+
+</html>
