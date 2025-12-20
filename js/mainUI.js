@@ -20,46 +20,19 @@ function slideNext(button) {
 }
 
 function add(button) {
-    // Lấy thẻ sản phẩm (nút "Thêm vào giỏ hàng" nằm trong .product-card)
     const card = button.closest('.product-card');
-    const img = card.querySelector('img').src;
-    const name = card.querySelector('.product-name').innerText.trim();
-    const price = card.querySelector('.new-price').innerText.trim();
+    const image = card.querySelector('img').src;
+    const name = card.querySelector('.product-name').innerText;
+    const price = Number(card.querySelector('.new-price').innerText.replace(/\D/g, ''));
 
-    // Lấy giỏ hàng từ localStorage (key: 'header-item-cart')
-    const stored = localStorage.getItem('header-item-cart');
-    const cart = [];
-    if (stored) {
-        try {
-            cart = JSON.parse(stored);
-            if (!Array.isArray(cart)) cart = [];
-        } catch (e) {
-            cart = [];
-        }
-    } else {
-        cart = [];
-    }
 
-    // Tìm sản phẩm cùng tên trong giỏ (dùng vòng for để dễ hiểu)
-    const foundIndex = -1;
-    for (var i = 0; i < cart.length; i++) {
-        if (cart[i].name === name) {
-            foundIndex = i;
-            break;
-        }
-    }
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push({ image, name, price, qty: 1 });
 
-    if (foundIndex !== -1) {
-        // Nếu có rồi thì tăng số lượng
-        cart[foundIndex].qty = cart[foundIndex].qty + 1;
-    } else {
-        // Nếu chưa có thì thêm mới
-        cart.push({ img: img, name: name, price: price, qty: 1 });
-    }
+    localStorage.setItem('cart', JSON.stringify(cart));
 
-    // Lưu lại vào localStorage
-    localStorage.setItem('header-item-cart', JSON.stringify(cart));
+    alert("Đã thêm " + name + " vào giỏ hàng");
 
-    // Thông báo đơn giản cho người dùng
-    alert('Đã thêm "' + name + '" vào giỏ hàng.');
+    window.location.href = '../html/cart.html';
+
 }

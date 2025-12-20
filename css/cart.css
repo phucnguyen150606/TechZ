@@ -206,103 +206,20 @@ body {
     color: #666;
 }
 
-.cart-table tbody tr:hover {
-    background: #fafafa;
-}
-
-.product-info {
+#cart-items .cart-product {
     display: flex;
-    gap: 15px;
+    justify-content: center;
     align-items: center;
+    gap: 10px;
+    max-width: 280px;
 }
 
-.product-image {
+#cart-items img {
     width: 60px;
     height: 60px;
     border-radius: 4px;
     object-fit: cover;
     background: #f0f0f0;
-}
-
-.product-name {
-    font-weight: 500;
-    color: #333;
-    max-width: 200px;
-}
-
-.quantity-control {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.quantity-control button {
-    width: 28px;
-    height: 28px;
-    border: 1px solid #ddd;
-    background: #fff;
-    cursor: pointer;
-    border-radius: 4px;
-    font-weight: 600;
-    color: #666;
-    transition: all 0.3s;
-}
-
-.quantity-control button:hover {
-    background: #f0f0f0;
-    border-color: #999;
-}
-
-.quantity-input {
-    width: 50px;
-    text-align: center;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    font-size: 14px;
-}
-
-.delete-btn {
-    background: #ff4444;
-    color: white;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 12px;
-    transition: all 0.3s;
-}
-
-.delete-btn:hover {
-    background: #cc0000;
-}
-
-
-/* ===== GIỎ TRỐNG ===== */
-
-.empty-cart-message {
-    padding: 60px 20px;
-    text-align: center;
-    color: #999;
-}
-
-.empty-cart-message p {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.continue-shopping {
-    display: inline-block;
-    background: #0066cc;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-
-.continue-shopping:hover {
-    background: #0052a3;
 }
 
 

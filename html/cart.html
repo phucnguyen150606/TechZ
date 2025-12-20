@@ -34,9 +34,7 @@
                 <span>📞0123 456 789</span>
             </div>
 
-            <div class="header-item-cart">
-                <a href="cart.html" class="cart-link">🛒Giỏ hàng</a>
-            </div>
+
 
             <div class="header-item-account">
                 <a href="signin.html" class="login-link">👤 Đăng nhập</a>
@@ -57,19 +55,20 @@
                                 <th>Đơn Giá</th>
                                 <th>Số Lượng</th>
                                 <th>Thành Tiền</th>
-
                             </tr>
                         </thead>
                         <tbody id="cart-items">
-                            <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+                            <tr>
+                                <td class="cart-product">
+                                    <img class="cart-img">
+                                    <span class="cart-name"></span>
+                                </td>
+                                <td class="cart-price"></td>
+                                <td class="cart-qty"></td>
+                                <td class="cart-total"></td>
+                            </tr>
                         </tbody>
                     </table>
-
-                    <!-- Thông báo khi giỏ trống -->
-                    <div id="empty-cart-message" class="empty-cart-message" style="display: none;">
-                        <p>🛒 Giỏ hàng của bạn trống</p>
-
-                    </div>
                 </div>
 
                 <!-- Sidebar thanh toán -->
@@ -81,26 +80,15 @@
                             <span>Tổng sản phẩm:</span>
                             <span id="total-items">0</span>
                         </div>
-
-                        <div class="summary-item">
-                            <span>Tổng tiền hàng:</span>
-                            <span id="subtotal">0 đ</span>
-                        </div>
-
-                        <div class="summary-item">
-                            <span>Phí vận chuyển:</span>
-                            <span id="shipping">0 đ</span>
-                        </div>
-
-                        <div class="summary-divider"></div>
-
+                        <hr>
+                        <br>
                         <div class="summary-total">
                             <span>Tổng cộng:</span>
                             <span id="total-price">0 đ</span>
                         </div>
 
-                        <button class="checkout-btn">💳 Thanh Toán</button>
-                        <a href="../index.html" class="continue-shopping-btn">Tiếp tục mua sắm</a>
+                        <button class="checkout-btn" onclick="payment()">💳 Thanh Toán</button>
+
                     </div>
                 </aside>
             </div>
