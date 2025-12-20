@@ -24,9 +24,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="main-header-logo"><a href="../index.html">TechZ</a></div>
-            <div class="search-box">
-                <input type="text" placeholder="Bạn cần tìm gì?">
+            <div class="main-header-logo">
+                <a href="../index.html"><img src="../img/logo.png"></a>
             </div>
         </div>
 
@@ -49,7 +48,7 @@
         <div class="signin-container">
             <div class="signin-card">
                 <h1 class="signin-title">Đăng nhập</h1>
-                <form id="signin-form" novalidate>
+                <form onsubmit="signin(event)">
                     <label class="input-label">Email hoặc số điện thoại
                         <input id="identifier" name="identifier" type="text" autocomplete="username" placeholder="email@example.com hoặc 012xxx" required>                
                     </label>
@@ -65,17 +64,13 @@
 
                     <button type="submit" class="signin-btn">Đăng nhập</button>
 
-                    <div class="or">hoặc</div>
-
-                    <button type="button" class="google-btn">Đăng nhập bằng Google</button>
-
                     <p class="signup">Chưa có tài khoản? <a href="signup.html">Đăng ký</a></p>
                 </form>
             </div>
         </div>
     </main>
 
-    <script src="../js/mainUI.js"></script>
+
     <script src="../js/signin.js"></script>
 </body>
 

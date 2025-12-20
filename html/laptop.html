@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechZ</title>
+    <link rel="stylesheet" href="../css/mainUIstyle.css">
     <link rel="stylesheet" href="../css/laptop.css">
 </head>
 
@@ -26,9 +27,11 @@
                         </ul>
                     </div>
                 </div>
-                <div class="main-header-logo"><a href="../index.html">TechZ</a></div>
+                <div class="main-header-logo">
+                    <a href="../index.html"><img src="../img/logo.png"></a>
+                </div>
                 <div class="search-box">
-                    <input type="text" placeholder="Bạn cần tìm gì?">
+                    <input id="search" type="text" placeholder="Bạn cần tìm gì?" onkeyup="sort()">
                 </div>
             </div>
 
@@ -64,6 +67,7 @@
                     <div class="product-price">
                         <span class="new-price">18.500.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/lapgamingAcerAsprire7.png" alt="">
@@ -71,6 +75,7 @@
                     <div class="product-price">
                         <span class="new-price">22.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopgamingASUSTUF.png" alt="">
@@ -78,6 +83,7 @@
                     <div class="product-price">
                         <span class="new-price">17.290.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/lapgamingAcerNitroV.png" alt="">
@@ -85,6 +91,7 @@
                     <div class="product-price">
                         <span class="new-price">15.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopLenovoLOQ.png" alt="">
@@ -92,6 +99,7 @@
                     <div class="product-price">
                         <span class="new-price">19.450.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopgamingASUSVivobook.png" alt="">
@@ -99,6 +107,7 @@
                     <div class="product-price">
                         <span class="new-price">42.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
 
                 <div class="product-card">
@@ -107,6 +116,7 @@
                     <div class="product-price">
                         <span class="new-price">20.500.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopgaming_Gigabyte_A16.png" alt="">
@@ -114,6 +124,7 @@
                     <div class="product-price">
                         <span class="new-price">25.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopgaming_HP_VICTUS15.png" alt="">
@@ -121,6 +132,7 @@
                     <div class="product-price">
                         <span class="new-price">20.290.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/lapgamingAcerNitroV.png" alt="">
@@ -128,6 +140,7 @@
                     <div class="product-price">
                         <span class="new-price">15.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopLenovoLOQ.png" alt="">
@@ -135,6 +148,7 @@
                     <div class="product-price">
                         <span class="new-price">19.450.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/laptopgamingASUSVivobook.png" alt="">
@@ -142,6 +156,7 @@
                     <div class="product-price">
                         <span class="new-price">42.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
                 <div class="product-card">
                     <img src="../img/lapgamingAcerAsprire7.png" alt="">
@@ -149,6 +164,7 @@
                     <div class="product-price">
                         <span class="new-price">22.990.000₫</span>
                     </div>
+                    <button class="add-to-cart">Thêm vào giỏ hàng</button>
                 </div>
         </main>
         <footer class="footer">
