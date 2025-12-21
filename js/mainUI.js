@@ -33,6 +33,6 @@ function add(button) {
 
     alert("Đã thêm " + name + " vào giỏ hàng");
 
-    window.location.href = '../html/cart.html';
+    window.location.href = 'html/cart.html';
 
 }
