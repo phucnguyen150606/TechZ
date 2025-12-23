@@ -41,21 +41,17 @@ function add(button) {
 function searchProducts() {
     const searchInput = document.getElementById('searchInput');
     const searchText = searchInput.value.toLowerCase().trim();
-
-    if (searchText === '') {
-        alert('Vui lòng nhập từ khóa tìm kiếm');
+    const productCards = document.querySelectorAll('.product-card');
+    let found = false;
+    if (!searchText) {
+        productCards.forEach(card => card.style.display = '');
         return;
     }
-
-    const productCards = document.querySelectorAll('.product-card');
-    const productList = document.querySelector('.products-list');
-    let found = false;
-
     productCards.forEach(card => {
         const productName = card.querySelector('.product-name').innerText.toLowerCase();
 
         if (productName.includes(searchText)) {
-            card.style.display = 'block';
+            card.style.display = '';
             found = true;
         } else {
             card.style.display = 'none';
@@ -66,22 +62,8 @@ function searchProducts() {
         alert('Không tìm thấy sản phẩm: ' + searchText);
     }
 }
-
-// Search button event
-document.addEventListener('DOMContentLoaded', function() {
-    const searchBtn = document.getElementById('searchBtn');
-    const searchInput = document.getElementById('searchInput');
-
-    if (searchBtn) {
-        searchBtn.addEventListener('click', searchProducts);
-    }
-
-    // Tìm kiếm khi nhấn Enter
-    if (searchInput) {
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchProducts();
-            }
-        });
-    }
-})
+//search event Enter
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keydown', e => {
+    if (e.key === 'Enter') searchProducts();
+});
