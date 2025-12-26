@@ -28,12 +28,13 @@ body {
     display: flex;
     margin-left: 0;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
     flex: 1 1 auto;
 }
 
 .menu-btn {
-    padding: 10px 15px;
+    padding: 15px 20px;
+    font-size: 20px;
     background: #0066ff;
     color: white;
     border: none;
@@ -161,6 +162,13 @@ body {
     color: white;
 }
 
+.header-item-account {
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    background: #0066ff;
+}
+
 .sub-header {
     width: 100%;
     background: #ffffff;
@@ -277,6 +285,7 @@ body {
 .product-price {
     color: #1A73E8;
     font-weight: 600;
+    overflow: hidden;
 }
 
 .footer {
@@ -356,26 +365,57 @@ body {
     vertical-align: middle;
 }
 
-
-/* Responsive header adjustments */
-
-@media (max-width: 900px) {
+@media (max-width: 767px) {
+    .main-header-logo img {
+        width: 200px;
+        height: auto;
+    }
     .main-header {
-        padding: 10px 16px;
+        padding: 8px 10px;
     }
-    .main-header-logo {
-        width: 100px;
-        height: 48px;
+    .menu-btn {
+        font-size: 14px;
+        padding: 6px 10px;
     }
-    .search-box {
-        display: none;
+    .header-item-account {
+        padding: 10px 10px;
     }
-    .left-header {
-        gap: 10px;
+    .sub-header {
+        padding: 5px;
     }
-    .right-header {
-        gap: 12px;
+    .sub-header ul {
         font-size: 13px;
+        gap: 6px;
+    }
+    .sub-header li a {
+        padding: 4px 6px;
+        display: inline-block;
+    }
+    .product-name {
+        font-size: 13px;
+    }
+    .new-price {
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .top-footer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        text-align: left;
+    }
+    .footer-column h3 {
+        font-size: 14px;
+    }
+    .footer-column ul li {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    .social-media {
+        grid-column: span 2;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
     }
 }
 

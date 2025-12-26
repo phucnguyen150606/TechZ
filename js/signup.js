@@ -6,6 +6,7 @@ function signup(event) {
     const pass = document.getElementById('password').value.trim();
     const confirm = document.getElementById('confirm_password').value;
     const agree = document.getElementById('agree').checked;
+    const users = JSON.parse(localStorage.getItem('users')) || [];
 
     if (!agree) {
         alert('Vui lòng đồng ý với điều khoản.');
@@ -19,8 +20,6 @@ function signup(event) {
         alert('Mật khầu cần ít nhất 6 ký tự');
         return;
     }
-    // Lấy danh sách user hiện có
-    const users = JSON.parse(localStorage.getItem('users')) || [];
 
     // Kiểm tra trùng email / số điện thoại
     const existed = users.find(u => u.identifier === identifier);
@@ -30,8 +29,7 @@ function signup(event) {
     }
 
     // Lưu tài khoản mới
-    const newUser = { name, identifier, pass };
-    users.push(newUser);
+    users.push({ name, identifier, pass });
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Đăng ký thành công! Bạn có thể đăng nhập ngay.');

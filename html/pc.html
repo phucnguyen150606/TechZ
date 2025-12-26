@@ -10,212 +10,209 @@
 </head>
 
 <body>
-    <header class="main-header">
-        <div class="left-header">
-            <div class="menu">
-                <button class="menu-btn">
-                        ☰ Danh mục
+    <div class="container">
+
+        <header class="main-header">
+            <div class="left-header">
+                <div class="menu">
+                    <button class="menu-btn">
+                        ☰
                     </button>
-                <div class="category-menu">
+                    <div class="category-menu">
+                        <ul>
+                            <li><a href="phone.html">Điện thoại</a></li>
+                            <li><a href="laptop.html">Laptop</a></li>
+                            <li><a href="pc.html">PC</a></li>
+                            <li><a href="equipment.html">Phụ kiện</a></li>
+                            <li><a href="display.html">Màn hình</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-header-logo">
+                    <a href="../index.html"><img src="../img/logo.png"></a>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Bạn cần tìm gì?" onkeydown="Enter(event)">
+                </div>
+            </div>
+
+            <div class="right-header">
+                <div class="header-item-account">
+                    <a href="signin.html" class="login-link">Đăng nhập</a>
+                </div>
+            </div>
+        </header>
+        <div class="sub-header">
+            <ul>
+                |
+                <li><a href="phone.html">Điện thoại</a></li>|
+                <li><a href="laptop.html">Laptop</a></li>|
+                <li><a href="pc.html">PC</a></li>|
+                <li><a href="equipment.html">Phụ kiện</a></li>|
+                <li><a href="display.html">Màn hình</a></li>|
+            </ul>
+        </div>
+        <main class="main-content">
+            <div class="products-list">
+                <div class="product-card">
+                    <img src="../img/pcASUSBlackwell.png" alt="">
+                    <h3 class="product-name">PC INT x ASUS Blackwell</h3>
+                    <div class="product-price">
+                        <span class="new-price">18.500.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC ASUS ROG HATSUNE MIKU EDITION.png" alt="">
+                    <h3 class="product-name">PC ASUS ROG HATSUNE MIKU EDITION</h3>
+                    <div class="product-price">
+                        <span class="new-price">22.990.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC INTEL I9.png" alt="">
+                    <h3 class="product-name">PC INTEL I9-14900K/VGA RTX 5080</h3>
+                    <div class="product-price">
+                        <span class="new-price">17.290.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC INT x MSI Dragon GODLIKE.png" alt="">
+                    <h3 class="product-name">PC INT x MSI Dragon GODLIKE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
+                    <div class="product-price">
+                        <span class="new-price">15.990.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC INT x MSI Dragon ACE.png" alt="">
+                    <h3 class="product-name">PC GVN INT x MSI Dragon ACE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
+                    <div class="product-price">
+                        <span class="new-price">19.450.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                    <img src="../img/pcASUSBlackwell.png" alt="">
+                    <h3 class="product-name">PC INT x ASUS Blackwell</h3>
+                    <div class="product-price">
+                        <span class="new-price">18.500.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                    <img src="../img/pc_intel_ultra5.png" alt="">
+                    <h3 class="product-name">PC Intel Ultra 5 225F/VGA RTX 5060 (DDR5)</h3>
+                    <div class="product-price">
+                        <span class="new-price">29.500.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC ASUS ROG HATSUNE MIKU EDITION.png" alt="">
+                    <h3 class="product-name">PC ASUS ROG HATSUNE MIKU EDITION</h3>
+                    <div class="product-price">
+                        <span class="new-price">22.990.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/pc_intel_i7-12700F.png" alt="">
+                    <h3 class="product-name">PC GVN Intel i7-14700F/ VGA RTX 5070</h3>
+                    <div class="product-price">
+                        <span class="new-price">50.290.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC INT x MSI Dragon GODLIKE.png" alt="">
+                    <h3 class="product-name">PC INT x MSI Dragon GODLIKE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
+                    <div class="product-price">
+                        <span class="new-price">15.990.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+
+                <div class="product-card">
+                    <img src="../img/PC INT x MSI Dragon ACE.png" alt="">
+                    <h3 class="product-name">PC GVN INT x MSI Dragon ACE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
+                    <div class="product-price">
+                        <span class="new-price">19.450.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+                <div class="product-card">
+                    <img src="../img/pcASUSBlackwell.png" alt="">
+                    <h3 class="product-name">PC INT x ASUS Blackwell</h3>
+                    <div class="product-price">
+                        <span class="new-price">18.500.000₫</span>
+                    </div>
+                    <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <div class="top-footer">
+                <div class="footer-column">
+                    <h3>Về TechZ</h3>
                     <ul>
-                        <li><a href="phone.html">Điện thoại</a></li>
-                        <li><a href="laptop.html">Laptop</a></li>
-                        <li><a href="pc.html">PC</a></li>
-                        <li><a href="equipment.html">Phụ kiện</a></li>
-                        <li><a href="display.html">Màn hình</a></li>
+                        <li>Giới thiệu về TechZ</li>
+                        <li>Tuyển dụng</li>
+                        <li>Điều khoản TechZ</li>
+                        <li>Chính sách bảo mật</li>
+                        <li>Liên hệ với chúng tôi</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Chăm sóc khách hàng</h3>
+                    <ul>
+                        <li>Trung tâm trợ giúp</li>
+                        <li>TechZ Mall</li>
+                        <li>Hướng dẫn mua hàng</li>
+                        <li>Chính sách đổi trả</li>
+                        <li>Chính sách bảo hành</li>
+                        <li>Thanh toán & Vận chuyển</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Liên hệ</h3>
+                    <ul>
+                        <li>Địa chỉ: 123 Đường Nguyễn Huệ, TP.HCM</li>
+                        <li>Điện thoại: 0123 456 789</li>
+                        <li>Email: info@techz.com</li>
+                        <li>Giờ làm việc: 8:00 - 21:00 hàng ngày</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <ul class="social-media">
+                        <li>
+                            <a href="#"><img src="../img/fb_icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/insta_icon.png" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="../img/X_icon.png" alt=""></a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
-            <div class="main-header-logo">
-                <a href="../index.html"><img src="../img/logo.png"></a>
+            <div class="footer-copyright">
+                <p>TechZ © 2025 – Cửa hàng thiết bị điện tử giá tốt.</p>
             </div>
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Bạn cần tìm gì?">
-            </div>
-        </div>
-
-        <div class="right-header">
-            <div class="header-item-hotline">
-                <span>📞0123 456 789</span>
-            </div>
-
-
-
-            <div class="header-item-account">
-                <a href="signin.html" class="login-link">👤 Đăng nhập</a>
-            </div>
-        </div>
-    </header>
-    <div class="sub-header">
-        <ul>
-            |
-            <li><a href="phone.html">Điện thoại</a></li>|
-            <li><a href="laptop.html">Laptop</a></li>|
-            <li><a href="pc.html">PC</a></li>|
-            <li><a href="equipment.html">Phụ kiện</a></li>|
-            <li><a href="display.html">Màn hình</a></li>|
-        </ul>
+        </footer>
     </div>
-    <main class="main-content">
-        <div class="products-list">
-            <div class="product-card">
-                <img src="../img/pcASUSBlackwell.png" alt="">
-                <h3 class="product-name">PC INT x ASUS Blackwell</h3>
-                <div class="product-price">
-                    <span class="new-price">18.500.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC ASUS ROG HATSUNE MIKU EDITION.png" alt="">
-                <h3 class="product-name">PC ASUS ROG HATSUNE MIKU EDITION</h3>
-                <div class="product-price">
-                    <span class="new-price">22.990.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC INTEL I9.png" alt="">
-                <h3 class="product-name">PC INTEL I9-14900K/VGA RTX 5080</h3>
-                <div class="product-price">
-                    <span class="new-price">17.290.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC INT x MSI Dragon GODLIKE.png" alt="">
-                <h3 class="product-name">PC INT x MSI Dragon GODLIKE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
-                <div class="product-price">
-                    <span class="new-price">15.990.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC INT x MSI Dragon ACE.png" alt="">
-                <h3 class="product-name">PC GVN INT x MSI Dragon ACE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
-                <div class="product-price">
-                    <span class="new-price">19.450.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-            <div class="product-card">
-                <img src="../img/pcASUSBlackwell.png" alt="">
-                <h3 class="product-name">PC INT x ASUS Blackwell</h3>
-                <div class="product-price">
-                    <span class="new-price">18.500.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-            <div class="product-card">
-                <img src="../img/pc_intel_ultra5.png" alt="">
-                <h3 class="product-name">PC Intel Ultra 5 225F/VGA RTX 5060 (DDR5)</h3>
-                <div class="product-price">
-                    <span class="new-price">29.500.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC ASUS ROG HATSUNE MIKU EDITION.png" alt="">
-                <h3 class="product-name">PC ASUS ROG HATSUNE MIKU EDITION</h3>
-                <div class="product-price">
-                    <span class="new-price">22.990.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/pc_intel_i7-12700F.png" alt="">
-                <h3 class="product-name">PC GVN Intel i7-14700F/ VGA RTX 5070</h3>
-                <div class="product-price">
-                    <span class="new-price">50.290.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC INT x MSI Dragon GODLIKE.png" alt="">
-                <h3 class="product-name">PC INT x MSI Dragon GODLIKE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
-                <div class="product-price">
-                    <span class="new-price">15.990.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-
-            <div class="product-card">
-                <img src="../img/PC INT x MSI Dragon ACE.png" alt="">
-                <h3 class="product-name">PC GVN INT x MSI Dragon ACE (Intel Core Ultra 9 285K/ VGA RTX 5090) (Powered by MSI)</h3>
-                <div class="product-price">
-                    <span class="new-price">19.450.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-            <div class="product-card">
-                <img src="../img/pcASUSBlackwell.png" alt="">
-                <h3 class="product-name">PC INT x ASUS Blackwell</h3>
-                <div class="product-price">
-                    <span class="new-price">18.500.000₫</span>
-                </div>
-                <button class="add-to-cart" onclick="add(this)">Mua ngay</button>
-            </div>
-        </div>
-    </main>
-    <footer class="footer">
-        <div class="top-footer">
-            <div class="footer-column">
-                <h3>Về TechZ</h3>
-                <ul>
-                    <li>Giới thiệu về TechZ</li>
-                    <li>Tuyển dụng</li>
-                    <li>Điều khoản TechZ</li>
-                    <li>Chính sách bảo mật</li>
-                    <li>Liên hệ với chúng tôi</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Chăm sóc khách hàng</h3>
-                <ul>
-                    <li>Trung tâm trợ giúp</li>
-                    <li>TechZ Mall</li>
-                    <li>Hướng dẫn mua hàng</li>
-                    <li>Chính sách đổi trả</li>
-                    <li>Chính sách bảo hành</li>
-                    <li>Thanh toán & Vận chuyển</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Liên hệ</h3>
-                <ul>
-                    <li>Địa chỉ: 123 Đường Nguyễn Huệ, TP.HCM</li>
-                    <li>Điện thoại: 0123 456 789</li>
-                    <li>Email: info@techz.com</li>
-                    <li>Giờ làm việc: 8:00 - 21:00 hàng ngày</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Kết nối với chúng tôi</h3>
-                <ul class="social-media">
-                    <li>
-                        <a href="#"><img src="../img/fb_icon.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../img/insta_icon.png" alt=""></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="../img/X_icon.png" alt=""></a>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <p>TechZ © 2025 – Cửa hàng thiết bị điện tử giá tốt.</p>
-        </div>
-    </footer>
     <script src="../js/mainUI.js"></script>
     <script src="../js/pc.js"></script>
 </body>

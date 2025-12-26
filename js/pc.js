@@ -3,11 +3,7 @@ function add(button) {
     const image = card.querySelector('img').src;
     const name = card.querySelector('.product-name').innerText;
     const price = Number(card.querySelector('.new-price').innerText.replace(/\D/g, ''));
-
-
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push({ image, name, price, qty: 1 });
-
+    const cart = [{ image, name, price, qty: 1 }];
     localStorage.setItem('cart', JSON.stringify(cart));
 
     alert("Đã thêm " + name + " vào giỏ hàng");
@@ -27,7 +23,7 @@ function searchProducts() {
         return;
     }
     productCards.forEach(productCards => {
-        const productName = productCards.querySelector('.product-name').innerText.toLowerCase();
+        const productName = productCards.querySelector('.product-name').innerText.toLowerCase().trim();
 
         if (productName.includes(searchText)) {
             productCards.style.display = '';
@@ -41,7 +37,6 @@ function searchProducts() {
     if (!found) alert('Không tìm thấy sản phẩm: ' + searchText);
 }
 //search event Enter
-const searchInput = document.getElementById('searchInput');
-searchInput.addEventListener('keydown', e => {
-    if (e.key === 'Enter') searchProducts();
-});
+function Enter(event) {
+    if (event.key === 'Enter') searchProducts();
+}
