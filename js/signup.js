@@ -1,8 +1,7 @@
 function signup(event) {
     event.preventDefault();
-
-    const name = document.getElementById('fullname').value.trim();
     const identifier = document.getElementById('identifier').value.trim();
+    const email = document.getElementById('email').value.trim();
     const pass = document.getElementById('password').value.trim();
     const confirm = document.getElementById('confirm_password').value;
     const agree = document.getElementById('agree').checked;
@@ -12,7 +11,14 @@ function signup(event) {
         alert('Vui lòng đồng ý với điều khoản.');
         return;
     }
-
+    // Kiểm tra trùng email / số điện thoại
+    const existed = users.find(u =>
+        u.identifier === identifier || u.email === email
+    );
+    if (existed) {
+        alert('Email hoặc tài khoản đã tồn tại!');
+        return;
+    }
     if (pass !== confirm) {
         alert('Mật khẩu không khớp.');
         return;
@@ -21,15 +27,8 @@ function signup(event) {
         return;
     }
 
-    // Kiểm tra trùng email / số điện thoại
-    const existed = users.find(u => u.identifier === identifier);
-    if (existed) {
-        alert('Tài khoản đã tồn tại!');
-        return;
-    }
-
     // Lưu tài khoản mới
-    users.push({ name, identifier, pass });
+    users.push({ identifier, email, pass });
     localStorage.setItem('users', JSON.stringify(users));
 
     alert('Đăng ký thành công! Bạn có thể đăng nhập ngay.');

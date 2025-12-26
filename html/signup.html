@@ -43,12 +43,12 @@
                 <div class="signin-card">
                     <h1 class="signin-title">Đăng ký</h1>
                     <form onsubmit="signup(event)">
-                        <label class="input-label">Họ và tên
-                        <input id="fullname" name="fullname" type="text" placeholder="Họ và tên" required>
+                        <label class="input-label">Họ và tên hoặc số điện thoại
+                        <input id="identifier" name="identifier" type="text" placeholder="Họ và tên hoặc 0123XXX" required>
                     </label>
 
-                        <label class="input-label">Email hoặc số điện thoại
-                        <input id="identifier" name="identifier" type="text" autocomplete="username" placeholder="email@example.com hoặc 012xxx" required>
+                        <label class="input-label">Email
+                        <input id="email" name="email" type="email" autocomplete="username" placeholder="email@example.com" required>
                     </label>
 
                         <label class="input-label">Mật khẩu

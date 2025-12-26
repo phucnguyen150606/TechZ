@@ -17,7 +17,7 @@ document.getElementById('total-items').innerText = qty;
 document.getElementById('total-price').innerText = total.toLocaleString('vi-VN') + ' đ';
 
 function payment() {
-    const btn = document.getElementsByClassName('checkout-btn');
+    const btn = document.getElementsByClassName('payment-btn');
     if (btn) {
         alert("Thanh toán thành công.");
         localStorage.removeItem('cart');
