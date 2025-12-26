@@ -351,11 +351,11 @@ body {
         font-size: 14px;
         padding: 6px 10px;
     }
-    .header-item-account {
-        padding: 10px 10px;
+    .search-box {
+        width: 100%;
     }
     .sub-header {
-        padding: 10px;
+        padding: 20px;
     }
     .sub-header ul {
         font-size: 13px;
@@ -363,6 +363,11 @@ body {
     }
     .sub-header li a {
         padding: 4px 6px;
+    }
+    .products-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px 20px;
     }
     .product-name {
         font-size: 13px;
@@ -385,19 +390,13 @@ body {
         line-height: 1.6;
     }
     .social-media {
-        grid-column: span 2;
         display: flex;
         gap: 12px;
     }
 }
 
-@media (max-width: 480px) {
-    .menu-btn {
-        padding: 8px 10px;
-        font-size: 14px;
-    }
-    .main-header-logo {
-        width: 86px;
-        height: 42px;
+@media (max-width: 640px) {
+    .search-box input {
+        width: 100%;
     }
 }

@@ -126,22 +126,6 @@ body {
     border: 2px solid #ffb800;
 }
 
-.search-btn {
-    height: 40px;
-    width: 50px;
-    background: #ffb800;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.search-btn:hover {
-    background: #ff9800;
-    transform: scale(1.05);
-}
-
 .right-header {
     display: flex;
     align-items: center;
