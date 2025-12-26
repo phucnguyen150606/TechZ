@@ -24,7 +24,6 @@ function searchProducts() {
     }
     productCards.forEach(productCards => {
         const productName = productCards.querySelector('.product-name').innerText.toLowerCase().trim();
-
         if (productName.includes(searchText)) {
             productCards.style.display = '';
             found = true;
@@ -32,7 +31,6 @@ function searchProducts() {
             productCards.style.display = 'none';
         }
     });
-
 
     if (!found) alert('Không tìm thấy sản phẩm: ' + searchText);
 }

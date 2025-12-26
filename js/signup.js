@@ -6,17 +6,19 @@ function signup(event) {
     const confirm = document.getElementById('confirm_password').value;
     const agree = document.getElementById('agree').checked;
     const users = JSON.parse(localStorage.getItem('users')) || [];
-
+    const check = "@gmail.com";
     if (!agree) {
         alert('Vui lòng đồng ý với điều khoản.');
         return;
     }
     // Kiểm tra trùng email / số điện thoại
-    const existed = users.find(u =>
-        u.identifier === identifier || u.email === email
-    );
+    const existed = users.find(u => u.identifier === identifier);
     if (existed) {
         alert('Email hoặc tài khoản đã tồn tại!');
+        return;
+    }
+    if (!email.includes(check)) {
+        alert("Email không hợp lệ!");
         return;
     }
     if (pass !== confirm) {
