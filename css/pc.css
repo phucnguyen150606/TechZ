@@ -29,7 +29,6 @@ body {
     margin-left: 0;
     align-items: center;
     gap: 18px;
-    flex: 1 1 auto;
 }
 
 .menu-btn {
@@ -110,12 +109,6 @@ body {
 
 .main-header-logo a {
     text-decoration: none;
-}
-
-.search-box {
-    display: flex;
-    align-items: center;
-    gap: 8px;
 }
 
 .search-box input {
@@ -295,7 +288,7 @@ body {
     padding: 20px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .main-header-logo img {
         width: 200px;
         height: auto;
@@ -319,7 +312,6 @@ body {
     }
     .sub-header li a {
         padding: 4px 6px;
-        display: inline-block;
     }
     .products-list {
         grid-template-columns: repeat(2, 1fr);
@@ -348,7 +340,6 @@ body {
     }
     .social-media {
         display: flex;
-        justify-content: center;
         gap: 12px;
     }
 }

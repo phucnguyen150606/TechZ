@@ -29,7 +29,6 @@ body {
     margin-left: 0;
     align-items: center;
     gap: 18px;
-    flex: 1 1 auto;
 }
 
 .menu-btn {
@@ -340,7 +339,7 @@ body {
     padding: 20px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .main-header-logo img {
         width: 200px;
         height: auto;
@@ -356,7 +355,7 @@ body {
         padding: 10px 10px;
     }
     .sub-header {
-        padding: 5px;
+        padding: 10px;
     }
     .sub-header ul {
         font-size: 13px;
@@ -364,7 +363,6 @@ body {
     }
     .sub-header li a {
         padding: 4px 6px;
-        display: inline-block;
     }
     .product-name {
         font-size: 13px;
@@ -389,7 +387,6 @@ body {
     .social-media {
         grid-column: span 2;
         display: flex;
-        justify-content: center;
         gap: 12px;
     }
 }

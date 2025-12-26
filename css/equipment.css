@@ -128,7 +128,7 @@
     padding: 20px 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .main-header-logo img {
         width: 200px;
         height: auto;
@@ -140,11 +140,11 @@
         font-size: 14px;
         padding: 6px 10px;
     }
-    .search-box input {
-        width: 140px;
+    .search-box {
+        width: 100%;
     }
     .sub-header {
-        padding: 5px;
+        padding: 10px;
     }
     .sub-header ul {
         font-size: 13px;
@@ -152,7 +152,6 @@
     }
     .sub-header li a {
         padding: 4px 6px;
-        display: inline-block;
     }
     .product-name {
         font-size: 13px;
@@ -176,7 +175,6 @@
     }
     .social-media {
         display: flex;
-        justify-content: center;
         gap: 12px;
     }
 }
