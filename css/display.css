@@ -140,6 +140,13 @@ body {
     color: white;
 }
 
+.header-item-cart {
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    background: #0066ff;
+}
+
 .header-item-account {
     padding: 10px 15px;
     border-radius: 6px;

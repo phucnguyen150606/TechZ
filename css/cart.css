@@ -206,7 +206,11 @@ body {
     color: #666;
 }
 
-#cart-items .cart-product {
+#cart-items tr {
+    display: none;
+}
+
+.cart-product {
     display: flex;
     justify-content: center;
     align-items: center;

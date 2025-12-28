@@ -3,8 +3,14 @@ function add(button) {
     const image = card.querySelector('img').src;
     const name = card.querySelector('.product-name').innerText;
     const price = Number(card.querySelector('.new-price').innerText.replace(/\D/g, ''));
-    const cart = [{ image, name, price, qty: 1 }];
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+    const exitsItem = cart.find(item => item.name === name);
+    if (exitsItem) {
+        exitsItem.qty += 1;
+    } else {
+        cart.push({ image, name, price, qty: 1 });
+    }
     localStorage.setItem('cart', JSON.stringify(cart));
 
     alert("Đã thêm " + name + " vào giỏ hàng");
